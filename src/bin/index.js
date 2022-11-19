@@ -1,5 +1,7 @@
+require('dotenv').config()
+
 const app = require("../app")
-const SERVER_CONSTS = require("../consts/server")
+const SERVER_CONSTS = require("../config/server")
 
 const {PORT} = SERVER_CONSTS
 
