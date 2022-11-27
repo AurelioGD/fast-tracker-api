@@ -1,10 +1,10 @@
 const { Router } = require("express")
-const { taskController, tasksController } = require("./taskController")
+const { taskIncrementController, taskStopController, taskCreateController } = require("./taskController")
 
 const router = Router()
 
-router.get("/task", taskController)
-router.get("/task", taskController)
-router.get("/tasks", tasksController)
+router.post("/task/increment", taskIncrementController)
+router.post("/task/create", taskCreateController)
+router.post("/task/stop", taskStopController)
 
 module.exports = router

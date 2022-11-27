@@ -7,8 +7,10 @@ const { MONGO_URI } = SERVER_CONSTS
 const app = express()
 
 const taskRoutes = require("./endpoints/task/taskRoutes")
-console.log({MONGO_URI})
+
 mongoose.connect(MONGO_URI)
+
+app.use(express.json())
 
 app.use(taskRoutes)
 

@@ -1,5 +1,11 @@
 const mongoose = require("mongoose")
 
-const Task = mongoose.model('Task', { name: String });
+const schema = { 
+    description: String,
+    timeTask: Number,
+    timeCreated: Number
+}
+
+const Task = mongoose.model('Task', schema);
 
 module.exports = Task
